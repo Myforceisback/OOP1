@@ -7,6 +7,7 @@
 using namespace std;
 
 class Worker {
+private:
 	string m_name;
 	string m_position;
 	int m_age;
@@ -54,7 +55,7 @@ int main() {
 
 	Worker* arr = new Worker[lenght];
 
-	for (int i = 0; i < lenght; i++) { // ηΰοθρό
+	for (int i = 0; i < lenght; i++) { // Γ§Γ Γ―Γ¨Γ±ΓΌ
 
 		cout << "Enter first and last name -> " << " ";
 		cin >> name;
@@ -68,7 +69,7 @@ int main() {
 		cout << endl;
 	}
 
-	// Ηΰδΰνθε ΐ
+	// Γ‡Γ Γ¤Γ Γ­Γ¨Γ¥ Γ€
 	cout << endl;
 	cout << "Task A" << endl;
 	int ag;
@@ -81,7 +82,7 @@ int main() {
 		}
 	}
 
-	// Ηΰδΰνθε Α
+	// Γ‡Γ Γ¤Γ Γ­Γ¨Γ¥ Γ
 	cout << endl;
 	cout << "Task B" << endl;
 	int sal;
@@ -94,7 +95,7 @@ int main() {
 		}
 	}
 
-	// Ηΰδΰνθε Β
+	// Γ‡Γ Γ¤Γ Γ­Γ¨Γ¥ Γ‚
 	cout << endl;
 	cout << "Task C" << endl;
 	string pos;
