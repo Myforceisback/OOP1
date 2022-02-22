@@ -3,7 +3,7 @@
 #include <string>
 #include <stdlib.h>
 
-
+//Добавить get и set, использовать все конструкторы, добавить возможность менять параметры объекта
 using namespace std;
 
 class Worker {
@@ -25,21 +25,32 @@ public:
 		this->m_age = age;
 		this->m_salary = salary;
 	}
-	int agePosition() {
+	Worker(const Worker &obj){
+		m_name = obj.m_name;
+		m_position = obj.m_position;
+		m_age = obj.m_age;
+		m_salary = obj.m_salary;
+	}
+
+	int getAge() {
 		return m_age;
 	}
-	int salary() {
+	int getSalary() {
 		return m_salary;
 	}
-	string position() {
+	string getPosition() {
 		return m_position;
 	}
-	string nameEmployee() {
+	string getName() {
 		return m_name;
 	}
-	/*~Worker() {
-		cout << "Destuct";
-	}*/
+	~Worker() {
+		m_name;
+		m_position;
+		m_age;
+		m_salary;
+	}
+	
 };
 
 int main() {
@@ -59,7 +70,7 @@ int main() {
 
 		cout << "Enter first and last name -> " << " ";
 		cin >> name;
-		cout << "Enter position -> " << " ";
+		cout << "Enter position -> " << " "; 
 		cin >> position;
 		cout << "Enter age of the position -> " << " ";
 		cin >> age;
@@ -69,7 +80,7 @@ int main() {
 		cout << endl;
 	}
 
-	// Çàäàíèå À
+	// Task A
 	cout << endl;
 	cout << "Task A" << endl;
 	int ag;
@@ -82,7 +93,7 @@ int main() {
 		}
 	}
 
-	// Çàäàíèå Á
+	// Task B
 	cout << endl;
 	cout << "Task B" << endl;
 	int sal;
@@ -95,7 +106,7 @@ int main() {
 		}
 	}
 
-	// Çàäàíèå Â
+	// Task C
 	cout << endl;
 	cout << "Task C" << endl;
 	string pos;
@@ -107,5 +118,6 @@ int main() {
 			cout << arr[i].nameEmployee() << endl;
 		}
 	}
+	system("pause");
 	delete[] arr;
 }
